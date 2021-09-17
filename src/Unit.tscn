@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="Unit" type="Path2D"]
+curve = null
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotate = false
+loop = false
