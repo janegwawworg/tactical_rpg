@@ -3,7 +3,7 @@ extends Node2D
 class_name Cursor
 
 signal accept_pressed(cell)
-signal move(new_cell)
+signal moved(new_cell)
 
 export var grid: Resource = preload("res://src/Grid.tres")
 export var ui_cooldown := 0.1
@@ -53,5 +53,5 @@ func set_cell(value: Vector2) -> void:
 
 	cell = new_cell
 	position = grid.calculate_map_position(cell)
-	emit_signal("move", cell)
+	emit_signal("moved", cell)
 	_timer.start()

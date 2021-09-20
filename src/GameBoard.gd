@@ -90,7 +90,7 @@ func _move_active_unit(new_cell: Vector2) -> void:
 	_clear_active_unit()
 
 
-func _on_Cursor_move(new_cell: Vector2) -> void:
+func _on_Cursor_moved(new_cell: Vector2) -> void:
 	if _active_unit and _active_unit.is_selected:
 		_unit_path.draw(_active_unit.cell, new_cell)
 
