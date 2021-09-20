@@ -1,7 +1,7 @@
 extends Reference
 class_name PathFinder
 
-const DIRECTIONs = [Vector2.LEFT, Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
+const DIRECTIONS = [Vector2.LEFT, Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
 
 var _grid: Resource
 var _astar := AStar2D.new()
@@ -21,7 +21,7 @@ func calculate_point_path(start: Vector2, end: Vector2) -> PoolVector2Array:
 	if _astar.has_point(start_index) and _astar.has_point(end_index):
 		return _astar.get_point_path(start_index, end_index)
 	else:
-		return PoolVector2Array
+		return PoolVector2Array()
 
 
 func _add_and_connect_points(cell_mappings: Dictionary) -> void:
@@ -40,5 +40,5 @@ func _find_neighbor_indices(cell: Vector2, cell_mappings: Dictionary) -> Array:
 		if not cell_mappings.has(neighbor):
 			continue
 		if not _astar.are_points_connected(cell_mappings[cell], cell_mappings[neighbor]):
-			out.push_back(cell_mapping[neighbor])
+			out.push_back(cell_mappings[neighbor])
 	return out
