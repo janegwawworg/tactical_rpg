@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Cursor.gd"
 }, {
+"base": "YSort",
+"class": "GameBoard",
+"language": "GDScript",
+"path": "res://src/GameBoard.gd"
+}, {
 "base": "Resource",
 "class": "Grid",
 "language": "GDScript",
@@ -30,15 +35,22 @@ _global_script_classes=[ {
 "path": "res://src/Unit.gd"
 }, {
 "base": "TileMap",
+"class": "UnitOverlay",
+"language": "GDScript",
+"path": "res://src/UnitOverlay.gd"
+}, {
+"base": "TileMap",
 "class": "UnitPath",
 "language": "GDScript",
 "path": "res://src/UnitPath.gd"
 } ]
 _global_script_class_icons={
 "Cursor": "",
+"GameBoard": "",
 "Grid": "",
 "PathFinder": "",
 "Unit": "",
+"UnitOverlay": "",
 "UnitPath": ""
 }
 
@@ -47,6 +59,11 @@ _global_script_class_icons={
 config/name="tactical_rpg"
 run/main_scene="res://src/Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
 
 [rendering]
 

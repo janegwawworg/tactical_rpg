@@ -53,5 +53,5 @@ func set_cell(value: Vector2) -> void:
 
 	cell = new_cell
 	position = grid.calculate_map_position(cell)
-	emit_signal("moved", cell)
+	emit_signal("move", cell)
 	_timer.start()

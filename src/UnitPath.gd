@@ -7,17 +7,17 @@ var _pathfinder: PathFinder
 var current_path := PoolVector2Array()
 
 
-func _ready() -> void:
-	var rect_start := Vector2(4, 4)
-	var rect_end := Vector2(10, 8)
+# func _ready() -> void:
+#	var rect_start := Vector2(4, 4)
+#	var rect_end := Vector2(10, 8)
 
-	var points := []
-	for x in rect_end.x - rect_start.x + 1:
-		for y in rect_end.y - rect_start.y + 1:
-			points.append(rect_start + Vector2(x, y))
+#	var points := []
+#	for x in rect_end.x - rect_start.x + 1:
+#		for y in rect_end.y - rect_start.y + 1:
+#			points.append(rect_start + Vector2(x, y))
 
-	initialize(points)
-	draw(rect_start, Vector2(8, 7))
+#	initialize(points)
+#	draw(rect_start, Vector2(8, 7))
 
 
 func initialize(walkable_cells: Array) -> void:

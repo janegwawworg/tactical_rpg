@@ -29,13 +29,13 @@ func _ready() -> void:
 	if not Engine.editor_hint:
 		curve = Curve2D.new()
 
-	var points := [
-		Vector2(2, 2),
-		Vector2(2, 5),
-		Vector2(8, 5),
-		Vector2(8, 7),
-		]
-	walk_along(PoolVector2Array(points))
+	# var points := [
+	#	Vector2(2, 2),
+	#	Vector2(2, 5),
+	#	Vector2(8, 5),
+	#	Vector2(8, 7),
+	#	]
+	# walk_along(PoolVector2Array(points))
 
 
 func _process(delta: float) -> void:
